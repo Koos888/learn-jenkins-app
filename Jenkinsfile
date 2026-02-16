@@ -11,7 +11,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    ls -la
+                    ls -la  # List files to verify we're in the correct directory
                     node --version
                     npm --version
                     npm ci
