@@ -19,6 +19,12 @@ pipeline {
                     ls -al
                 '''
             }
+            tests {
+                sh '''
+                    ls -al build/ | grep index.html
+                    npm test
+                '''
+            }
         }
     }
 }
