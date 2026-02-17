@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        /*stage('Build') {
             agent {
                 docker {
                     image 'node:18-alpine'
@@ -19,7 +19,7 @@ pipeline {
                     ls -al
                 '''
             }
-        }
+        }*/
         stage('Tests') {
             agent {
                 docker {
@@ -43,7 +43,8 @@ pipeline {
             }
             steps {
                 sh '''
-                    npx serve -s build &
+                    npm install -g serve
+                    node_modules/.bin/serve -s build &
                     sleep 10  # Wait for the server to start
                     npx playwright test
                 '''
