@@ -80,7 +80,7 @@ pipeline {
             }
             
             environment {
-                CI_ENVIRONMENT_URL = "${env.STAGING_URL}"
+                CI_ENVIRONMENT_URL = 'STAGING_URL_TO_BE_SET'
             }
 
             steps {
@@ -118,7 +118,7 @@ pipeline {
             }
             
             environment {
-                CI_ENVIRONMENT_URL = 'STAGING_URL_TO_BE_SET'
+                CI_ENVIRONMENT_URL = 'https://splendid-marigold-1b2908.netlify.app'
             }
 
             steps {
