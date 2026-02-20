@@ -120,7 +120,7 @@ pipeline {
             
             environment {
                 /*CI_ENVIRONMENT_URL = 'https://splendid-marigold-1b2908.netlify.app' #netlify-token */
-                CI_ENVIRONMENT_URL = 'https://inquisitive-phoenix-09ee8d.netlify.app' #netlify-token2
+                CI_ENVIRONMENT_URL = 'https://inquisitive-phoenix-09ee8d.netlify.app' /*#netlify-token2*/
             }
 
             steps {
