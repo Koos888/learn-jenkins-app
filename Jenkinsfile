@@ -5,7 +5,7 @@ pipeline {
         /*NETLIFY_SITE_ID = 'b67f0cec-a3f8-44b5-b7d3-d54af82b9a70' #netlify-token*/
         NETLIFY_SITE_ID = 'b85a4eff-dc89-4362-9cb8-89ad65d97136' /*#netlify-token2*/
         /*NETLIFY_AUTH_TOKEN = credentials('netlify-token') #netlify-token*/
-        NETLIFY_AUTH_TOKEN = credentials('netlify-token2') #netlify-token2
+        NETLIFY_AUTH_TOKEN = credentials('netlify-token2') /*netlify-token2*/
         REACT_APP_VERSION = "1.0.$BUILD_ID"
     }
 
