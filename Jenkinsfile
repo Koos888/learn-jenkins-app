@@ -11,6 +11,23 @@ pipeline {
 
     stages {
 
+        stage('AWS') {
+            agent {
+                docker {
+                    image 'amazon/aws-cli'
+                    args "--entrypoint ''"  // Override entrypoint to allow running shell commands
+                }
+            }
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'mykoos-aws', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
+                    sh ''' 
+                        aws --version
+                        aws s3 ls
+                    '''
+                }
+            }
+        }
+
         stage('Build') {
             agent {
                 docker {
